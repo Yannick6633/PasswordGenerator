@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(109, 106, 106);
+}
+
+h1 {
+    text-align: center;
+}
+
+#paasword-display {
+    font-size: 1.875rem;
+    background-color: #f1f1f1;
+    border: 1px solid #CCC;
+    cursor: pointer;
+}
+
+#password-clippboard {
+    display: none;
+}

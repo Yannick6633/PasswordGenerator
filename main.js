@@ -1,0 +1,86 @@
+const p = new Password();
+p.exclude(Password.symbols);
+
+
+//p.exclude(Password.lowers|Password.symbols|Password.brackets);
+//p.include(Password.lowers);
+
+//console.log(p.generate(16));
+//console.log(p.getChars());
+//console.log(p.range, p.range.toString(2));
+
+const options = document.querySelector('#options');
+const size = document.querySelector('#size');
+const slider = document.querySelector('#slider');
+const displayer = document.querySelector('#displayer');
+
+displayer.style.cursor = 'pointer';
+displayer.style.background = 'pink'
+
+refresh();
+
+
+// addEventListener('type', callback(fonction de rappel), boolean: direction de l'événement);
+// size.addEventListener('input', () => slider.value = size.value );
+
+size.addEventListener('input', evt => {
+    slider.value = size.value
+    refresh();
+});
+
+slider.addEventListener('input', evt => {
+    size.value = slider.value
+    refresh();
+});
+
+displayer.addEventListener('click', evt => {
+    copyToClipboard(evt.target.textContent);
+});
+
+options.addEventListener('click', evt => {
+    const elem = evt.target;
+
+    if (elem.type && elem.type === 'checkbox') {
+        if (elem.checked) {
+            p.include(elem.value);
+        } else {
+            p.exclude(elem.value);
+        }
+
+        refresh();
+    }
+});
+
+function refresh() {
+    displayer.textContent = p.generate(size.value);
+    rangeFormList();
+}
+
+function rangeFormList() {
+    options.innerHTML = '';
+
+    p.data.forEach(objet => {
+        options.innerHTML += `
+            <li class="list-group-item">
+                ${objet.name} :
+                ${objet.chars}
+    
+                <input type="checkbox" value="${objet.range}" ${objet.range & p.range ? 'checked' : ''}>
+    
+            </li>
+        `;
+    });
+}
+
+function copyToClipboard(text) {
+    const dummy = document.createElement('textarea');
+    document.body.appendChild(dummy);
+    dummy.value = text;
+    dummy.select();
+    document.execCommand('copy');
+    document.body.removeChild(dummy);
+}
+
+    
+
+
