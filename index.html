@@ -6,8 +6,8 @@
     <title>Générez un mot de passe sécurisé</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="https://getbootstrap.com/docs/4.5/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!--link href="https://getbootstrap.com/docs/4.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"-->
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
@@ -21,47 +21,37 @@
   <body class="bg-light">
     <div class="container mt-5">
       <div class="py-4 text-center">
-        <img src="img/logo.svg" alt="" class="d-block mx auto mb-4" width="80" height="80">
-        <h2>Générez un mot de passe sécurisé</h2>
-        <p class="lead">
-            Utilisez notre générateur de mots de passe en ligne pour créer instantanément un mot de passe aléatoire
-            sécurisé.
-        </p>
+        <img src="img/logo.svg" alt=""  class="logo" width="60" height="60">
+        <h2 class="title">Générez un mot de passe sécurisé</h2>
       </div>
 
-      <p id="displayer"  class="row justify-content-md-center mb-5" style="font-size: 1.42rem;"></p>
+      <p id="displayer"  class="result__viewbox" style="font-size: 1.42rem;"></p>
 
-      <div class="row justify-content-md-center">
-          <div class="col-md-5 order-md-2 mb-2">
-              <h4 class="d-flex justify-content-between align-items-center mb-3">
+                    <div class="length range__slider">
+                        <div class="length__title field-title"></div>
+                        <input type="number" id="size" class="form-control" min="4" max="32" value="16" />
+                    </div>
+                   
+
+                    <div class="length range__slider" data-min="4" data-max="32">
+                        <div class="length__title field-title"></div>
+                        <input id="slider" type="range" min="4" max="32" value="16" />
+                    </div>
+
+              <h4>
                   <span class="text-muted">Caractères</span>
               </h4>
-              <ul id="options"></ul>
-          </div>
-
-          <div class="col-md-5 order-md-1">
-              <h4 class="mb-3">Personnalisez votre mot de passe</h4>
-              <form class="needs-validation" novalidate>
-                  <div class="row">
-                      <div class="col-md-6 mb-3">
-                          <label>Longueur du mot de passe</label>
-                          <input type="number" id="size" class="form-control" min="8" max="50" value="8" />
-                          <input type="range" id="slider" class="form-control" min="8" max="50" value="8" />
-                      </div>
+              <div class="settings">
+                  <div class="setting">
+                    <ul id="options"></ul>
                   </div>
-              </form>
-          </div>
-      </div>
+             
+              </div>
 
       <footer class="my-2 pt-3 text-muted text-center text-small">
           <p class="mb-1">&copy; <script>
                   document.write((new Date).getFullYear())
               </script> Password Generator Company</p>
-          <ul class="list-inline">
-              <li class="list-inline-item"><a href="#">Privacy</a></li>
-              <li class="list-inline-item"><a href="#">Terms</a></li>
-              <li class="list-inline-item"><a href="#">Support</a></li>
-          </ul>
       </footer>
   </div>
 
