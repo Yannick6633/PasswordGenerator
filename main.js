@@ -15,7 +15,6 @@ const slider = document.querySelector('#slider');
 const displayer = document.querySelector('#displayer');
 
 displayer.style.cursor = 'pointer';
-//displayer.style.background = 'pink'
 
 refresh();
 
@@ -80,6 +79,7 @@ function copyToClipboard(text) {
     document.execCommand('copy');
     document.body.removeChild(dummy);
 }
+
 
     
 

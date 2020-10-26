@@ -5,7 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: rgb(109, 106, 106);
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 h4 {
@@ -21,7 +21,7 @@ ul {
     width: 450px;
     height: 700px;
     padding: 10px 25px;
-    background: #0a0e31;
+    background: #262e70;
     border-radius: 10px;
 
     font-family: "Montserrat";
@@ -50,11 +50,12 @@ ul {
 }
 
 /**************************************************************/
+
+
 .result__viewbox {
     width: 100%;
-    background: rgba(255, 255, 255, 0.08);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border-radius: 8px;
-    color: #fff;
     text-align: center;
     line-height: 65px;
 }
@@ -79,7 +80,7 @@ ul {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background: rgba(255, 255, 255, 0.08);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border-radius: 8px;
     margin: 30px 0;
 }
@@ -106,7 +107,7 @@ ul {
     width: calc(100% - (70px));
     height: 2px;
     border-radius: 5px;
-    background: rgba(255, 255, 255, 0.314);
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     outline: none;
     padding: 0;
     margin: 0;
@@ -126,11 +127,38 @@ ul {
     position: relative;
     width: 100%;
     height: calc(150px - 10px);
-    background: rgba(255, 255, 255, 0.08);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border-radius: 8px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     color: #fff;
 }
+ 
+/*.btn.generate {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+    border-radius: 8px;
+    color: #fff;
+    border: none;
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    -webkit-transition: all 150ms ease;
+    transition: all 150ms ease;
+  }
   
+  .btn.generate:active {
+    -webkit-transform: translateY(-3%);
+            transform: translateY(-3%);
+    -webkit-box-shadow: 0 4px 8px rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.08);
+  }*/
