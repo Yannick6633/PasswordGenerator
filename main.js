@@ -14,7 +14,9 @@ const size = document.querySelector('#size');
 const slider = document.querySelector('#slider');
 const displayer = document.querySelector('#displayer');
 
+
 displayer.style.cursor = 'pointer';
+
 
 refresh();
 

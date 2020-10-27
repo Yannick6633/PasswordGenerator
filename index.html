@@ -1,76 +1,71 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Générez un mot de passe sécurisé</title>
 
-    <!-- Bootstrap core CSS -->
-    <!--link href="https://getbootstrap.com/docs/4.5/dist/css/bootstrap.min.css" rel="stylesheet"
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Générez un mot de passe sécurisé</title>
+
+  <!-- Bootstrap core CSS -->
+  <!--link href="https://getbootstrap.com/docs/4.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"-->
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
 
-    <!-- Favicons -->
-    <link rel="icon" href="img/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="img/favicon-16x16.png" sizes="16x16" type="image/png">
-    
-  </head>
+  <!-- Favicons -->
+  <link rel="icon" href="img/favicon-32x32.png" sizes="32x32" type="image/png" />
+  <link rel="icon" href="img/favicon-16x16.png" sizes="16x16" type="image/png" />
+</head>
 
-  <body class="bg-light">
-    <div class="container mt-5">
-      <div class="py-4 text-center">
-        <img src="img/logo.svg" alt=""  class="logo" width="60" height="60">
-        <h2 class="title">Générez un mot de passe sécurisé</h2>
+<body>
+  <div class="container">
+    <div class="py-4 text-center">
+      <img src="img/logo.svg" alt="" class="logo" width="60" height="60" />
+      <h2 class="title">Générez un mot de passe sécurisé</h2>
+    </div>
+
+    <p id="displayer" class="result__viewbox" style="font-size: 1.42rem"></p>
+
+    <div class="length range__slider">
+      <div class="length__title field-title"></div>
+      <input type="number" id="size" class="form-control" min="4" max="32" value="16" />
+    </div>
+
+    <div class="length range__slider" data-min="4" data-max="32">
+      <div class="length__title field-title"></div>
+      <input id="slider" type="range" min="4" max="32" value="16" />
+    </div>
+    <h4>
+      <span>Settings</span>
+    </h4>
+    <div class="settings">
+      <div class="setting">
+        <ul id="options"></ul>
       </div>
+    </div>
+    <!--button class="btn generate" id="generate">Generate Password</button-->
 
-      <p id="displayer"  class="result__viewbox" style="font-size: 1.42rem;"></p>
-     
-
-                    <div class="length range__slider">
-                        <div class="length__title field-title"></div>
-                        <input type="number" id="size" class="form-control" min="4" max="32" value="16" />
-                    </div>
-                   
-
-                    <div class="length range__slider" data-min="4" data-max="32">
-                        <div class="length__title field-title"></div>
-                        <input id="slider" type="range" min="4" max="32" value="16" />
-                    </div>
-              <h4>
-                  <span class="text-muted">Caractères</span>
-              </h4>
-              <div class="settings">
-                  <div class="setting">
-                    <ul id="options"></ul>
-                  </div>
-                </div>
-                <!--button class="btn generate" id="generate">Generate Password</button-->
-
-      <footer class="my-2 pt-3 text-muted text-center text-small">
-          <p class="mb-1">&copy; <script>
-                  document.write((new Date).getFullYear())
-              </script> Password Generator Company</p>
-      </footer>
+    <footer>
+      <p style="text-align: center">
+        &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        Password Generator
+      </p>
+    </footer>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-  </script>
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
   <script src="https://getbootstrap.com/docs/4.5/assets/js/vendor/jquery.slim.min.js"></script>
   <script src="https://getbootstrap.com/docs/4.5/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous">
-  </script>
+    integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf"
+    crossorigin="anonymous"></script>
   <script type="text/javascript" src="src/password.js"></script>
   <script type="text/javascript" src="main.js"></script>
-
 </body>
+
 </html>
-    
-
-
-
-
-

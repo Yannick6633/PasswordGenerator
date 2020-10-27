@@ -16,6 +16,7 @@ ul {
     list-style-type: none;
 }
 
+
 .container {
     margin: 40px 0;
     width: 450px;
@@ -37,17 +38,6 @@ ul {
   .container p {
     color: #fff;
   }
-
-#paasword-display {
-    font-size: 1.875rem;
-    background-color: #f1f1f1;
-    border: 1px solid #CCC;
-    cursor: pointer;
-}
-
-#password-clippboard {
-    display: none;
-}
 
 /**************************************************************/
 
